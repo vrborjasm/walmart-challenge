@@ -1,3 +1,6 @@
 [submodule "walmart-frontend"]
 	path = walmart-frontend
 	url = https://github.com/vrborjasm/walmartFrontEnd.git
+[submodule "walmart-server"]
+	path = walmart-server
+	url = https://github.com/vrborjasm/walmartBackEnd.git
