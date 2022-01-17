@@ -1,0 +1,30 @@
+version: '3.9'
+
+services:
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    env_file:
+     - ./.env
+    volumes:
+      - ./products-db/:/usr/src/db
+
+  server:
+    build: ./walmart-server
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./walmart-server:/usr/src/app
+    env_file:
+     - ./.env
+
+  client:
+    build:
+      context: ./walmart-frontend
+    env_file:
+      - ./.env
+    ports:
+      - "3001:3000"
+    volumes:
+      - ./walmart-frontend:/usr/src/app
