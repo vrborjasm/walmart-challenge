@@ -4,3 +4,6 @@
 [submodule "walmart-server"]
 	path = walmart-server
 	url = https://github.com/vrborjasm/walmartBackEnd.git
+[submodule "products-db"]
+	path = products-db
+	url = git@github.com:walmartdigital/products-db.git
